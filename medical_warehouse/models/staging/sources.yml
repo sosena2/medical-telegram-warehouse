@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: "Raw data loaded from the Telegram data lake"
+    tables:
+      - name: telegram_messages
+        description: "Raw Telegram messages from Ethiopian medical channels"
+        columns:
+          - name: id
+            description: "Auto-incremented surrogate key"
+          - name: message_id
+            description: "Original Telegram message ID"
+          - name: channel_name
+            description: "Name of the Telegram channel"
+          - name: message_date
+            description: "Timestamp when message was posted"
+          - name: message_text
+            description: "Full text of the message"
+          - name: has_media
+            description: "Whether the message contains media"
+          - name: image_path
+            description: "Local path to downloaded image"
+          - name: views
+            description: "Number of views"
+          - name: forwards
+            description: "Number of times forwarded"
