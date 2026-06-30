@@ -26,3 +26,23 @@ sources:
             description: "Number of views"
           - name: forwards
             description: "Number of times forwarded"
+
+      - name: yolo_detections
+        description: "YOLO object detection results from scraped images"
+        columns:
+          - name: id
+            description: "Auto-incremented surrogate key"
+          - name: message_id
+            description: "Telegram message ID the image belongs to"
+          - name: channel_name
+            description: "Name of the Telegram channel"
+          - name: image_path
+            description: "Local path to the detected image"
+          - name: detected_class
+            description: "Object class detected by YOLO (e.g. person, bottle)"
+          - name: confidence_score
+            description: "YOLO detection confidence score (0 to 1)"
+          - name: image_category
+            description: "Classified category: promotional, product_display, lifestyle, or other"
+          - name: detected_at
+            description: "Timestamp when detection was run"
